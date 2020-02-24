@@ -1,8 +1,7 @@
 # route_metric_dice
 randomly assign interface as prefered via route metric weight
 
-# usage:
-# sudo bash route_metric_dice.sh
+# usage:  sudo bash route_metric_dice.sh
 
 changed metric to prefer interface enp9s0f1 over eno2
 
