@@ -1,12 +1,14 @@
 #!/bin/bash
  
 get_interfaces() {
+
 	ifconfig|
 	grep en|
 	awk '{print $1}'|
 	grep ':'|
 	tr -d ':'|
 	sort -R
+
 }
 
 
@@ -14,6 +16,7 @@ chill() {
 
 	duration="$1"
 	sleep "$duration"
+
 }
 
 
@@ -27,6 +30,7 @@ change_int_metric() {
 
 
 main() {
+
 	weight='0'
 	interfaces="$(get_interfaces)"
 	last_interface='';
@@ -37,6 +41,7 @@ main() {
 		last_interface="$interface"
 		chill '5'; 
 	done
+
 }
 
 
